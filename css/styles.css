@@ -1,13 +1,13 @@
-/* styles.ccs */
+/* =====================
+   RESET & VARIABLES
+===================== */
 
-/* Reset básico */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Variables simples de diseño */
 :root {
   --color-fondo: #f5f5f5;
   --color-principal: #1f2933;
@@ -16,27 +16,20 @@
   --altura-navbar: 64px;
 }
 
-/* Estilos globales */
+/* =====================
+   BASE
+===================== */
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  color: var(--color-texto);
   background-color: var(--color-fondo);
+  color: var(--color-texto);
   line-height: 1.6;
 }
-
-.nav-link.active {
-  color: var(--color-acento);
-  border-bottom: 2px solid var(--color-acento);
-  padding-bottom: 0.25rem;
-}
-
-/* =====================
-   TIPOGRAFÍA
-===================== */
 
 h1 {
   font-size: 2rem;
@@ -52,6 +45,32 @@ h2 {
 
 p {
   max-width: 600px;
+}
+
+/* =====================
+   LAYOUT GLOBAL
+===================== */
+
+section {
+  scroll-margin-top: var(--altura-navbar);
+  padding: 5rem 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+section:nth-child(even) {
+  background-color: #ffffff;
+}
+
+section:nth-child(odd) {
+  background-color: #eef2f7;
+}
+
+.divider {
+  width: 60px;
+  height: 2px;
+  background-color: var(--color-acento);
+  margin: 2rem auto;
 }
 
 /* =====================
@@ -78,16 +97,10 @@ header {
   justify-content: space-between;
 }
 
-/* LOGO */
-
 .logo {
   height: 40px;
   width: auto;
-  display: block;
-  flex-shrink: 0;
 }
-
-/* MENU DESKTOP */
 
 .nav-menu {
   display: flex;
@@ -101,14 +114,11 @@ header {
   font-weight: 500;
 }
 
-.menu {
-  display: none;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.nav-link.active {
+  color: var(--color-acento);
+  border-bottom: 2px solid var(--color-acento);
+  padding-bottom: 0.25rem;
 }
-
-/* HAMBURGER */
 
 .menu-toggle {
   display: none;
@@ -118,85 +128,135 @@ header {
   cursor: pointer;
 }
 
-/* RESPONSIVE */
+/* =====================
+   INICIO (HERO)
+===================== */
 
-@media (max-width: 420px) {
-
-  .logo {
-    height: 32px;
-  }
-
-  h1 {
-  font-size: 1.6rem;
+#inicio {
+  max-width: none;
+  padding: 0;
 }
 
-  .menu-toggle {
-    display: block;
-    font-size: 1.5rem;
-  }
+.intro-hero-wrapper {
+  position: relative;
+  min-height: 220px;
+  overflow: hidden;
+}
 
-  .nav-menu {
-    position: absolute;
-    top: var(--altura-navbar);
-    left: 0;
-    width: 100%;
+.intro-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url("../assets/img/still-life-with-scales-justice.JPG");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right center;
+}
 
-    background-color: white;
+.intro-hero {
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
 
-    display: none;     
-    flex-direction: column;
-    align-items: center;
-    gap: 1.2rem;
-
-    padding: 1.5rem 0;
-    border-bottom: 1px solid #ddd;
-  }
-
-  .nav-menu.open {
-    display: flex;
-  }
+.intro-text {
+  max-width: 720px;
+  margin: 3rem auto;
+  padding: 0 2rem;
+  text-align: center;
 }
 
 /* =====================
-   CONTENIDO
+   NOSOTRAS
 ===================== */
 
-section {
-  scroll-margin-top: var(--altura-navbar);
-  padding: 6rem 1.5rem;
-  max-width: 1100px;
+.nosotras {
+  text-align: center;
+}
+
+.nosotras-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
+.nosotras-item img {
+  width: 100%;
+  max-width: 280px;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  border-radius: 6px;
+  background-color: #f0f0f0;
+  margin-bottom: 1rem;
+}
+
+.nosotras-item p {
+  margin: 0 auto;
+  font-size: 0.95rem;
+}
+
+/* =====================
+   SERVICIOS
+===================== */
+
+.servicios {
+  text-align: center;
+}
+
+.servicios-lista {
+  max-width: 600px;
   margin: 0 auto;
 }
 
-section:nth-child(even) {
-  background-color: #ffffff;
+.servicio-item {
+  margin-bottom: 3rem;
 }
 
-section:nth-child(odd) {
-  background-color: #eef2f7;
+.servicio-item h3 {
+  text-align: left;
+  font-size: 1.2rem;
+  margin-bottom: 0.75rem;
+  color: var(--color-principal);
+}
+
+.servicio-item p {
+  text-align: left;
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+
+.servicio-divider {
+  width: 48px;
+  height: 2px;
+  background-color: #d1d5db;
+  margin: 0 auto;
 }
 
 /* =====================
-   FOOTER
+   CONTACTO
 ===================== */
 
-footer {
+#contacto {
   text-align: center;
-  padding: 2rem;
-  background-color: #111827;
-  color: white;
 }
 
-/* =====================
-   DATOS DE CONTACTO
-===================== */
+#contacto .links {
+  margin: 2.5rem auto 0;
+  max-width: 420px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
 
 .contact-item {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.75rem;
 
-  text-decoration: none;   /* quita la línea */
+  text-decoration: none;
   color: var(--color-principal);
   font-size: 1rem;
 }
@@ -208,26 +268,15 @@ footer {
 .contact-item:hover {
   color: var(--color-acento);
 }
+
 /* =====================
-   FORMULARIO DE CONTACTO
+   FORMULARIO
 ===================== */
 
 .contact-form-intro {
-  text-align: center;
-  margin: 3rem auto 2rem;
   max-width: 600px;
-}
-
-.contact-form-intro .divider {
-  width: 60px;
-  height: 2px;
-  background-color: var(--color-acento);
-  margin: 0 auto 1rem;
-}
-
-.contact-form-intro p {
-  font-size: 0.95rem;
-  color: var(--color-texto);
+  margin: 3rem auto 2rem;
+  text-align: center;
 }
 
 .contact-form {
@@ -248,46 +297,21 @@ footer {
 .form-field label {
   font-size: 0.9rem;
   font-weight: 500;
-  color: var(--color-principal);
 }
 
 .form-field input,
 .form-field textarea {
   font-family: inherit;
   font-size: 1rem;
-
   padding: 0.6rem 0.75rem;
   border: 1px solid #ccc;
   border-radius: 4px;
-
-  width: 100%;
 }
 
 .form-field input:focus,
 .form-field textarea:focus {
   outline: none;
   border-color: var(--color-acento);
-}
-
-.btn-submit {
-  margin-top: 0.5rem;
-
-  align-self: flex-start;
-  padding: 0.6rem 1.5rem;
-
-  font-size: 1rem;
-  font-weight: 500;
-
-  background-color: var(--color-acento);
-  color: white;
-
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.btn-submit:hover {
-  opacity: 0.9;
 }
 
 .error-msg {
@@ -299,4 +323,97 @@ footer {
 .form-field.error input,
 .form-field.error textarea {
   border-color: #b91c1c;
+}
+
+.btn-submit {
+  align-self: flex-start;
+  padding: 0.6rem 1.5rem;
+  background-color: var(--color-acento);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* =====================
+   FOOTER
+===================== */
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: #111827;
+  color: white;
+}
+
+/* =====================
+   RESPONSIVE
+===================== */
+
+@media (max-width: 720px) {
+  .intro-bg {
+    background-position: 75% center;
+    opacity: 0.4;
+  }
+}
+
+@media (max-width: 420px) {
+  section {
+    padding: 3rem 1.5rem;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  .logo {
+    height: 32px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-menu {
+    position: absolute;
+    top: var(--altura-navbar);
+    left: 0;
+    width: 100%;
+    background: white;
+
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+
+    padding: 1.5rem 0;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .nav-menu.open {
+    display: flex;
+  }
+
+  .intro-bg {
+    background-position: 85% center;
+    opacity: 0.25;
+  }
+
+  .nosotras-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .nosotras-item img {
+    max-width: 200px;
+    margin: 0 auto 1rem;
+  }
+
+  .servicio-item h3 {
+    font-size: 1.1rem;
+  }
+
+  .servicio-item p {
+    font-size: 0.9rem;
+  }
 }

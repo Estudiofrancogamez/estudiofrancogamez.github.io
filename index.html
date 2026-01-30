@@ -48,20 +48,96 @@
     <!-- Secciones -->
     <main>
 
-        <section id="inicio">
-            <h1>Estudio de Abogadas FG</h1>
-            <p>Bienvenido/a a mi sitio.</p>
+        <section id="inicio" class="intro">
+
+            <div class="intro-hero-wrapper">
+                <div class="intro-bg"></div>
+
+                <div class="intro-hero">
+                    <h1>Estudio de Abogadas FG</h1>
+                    <p>Claim o frase con todo el punch</p>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="intro-text">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                    fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                    sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+            </div>
+
         </section>
 
-        <section id="nosotras">
+
+        <section id="nosotras" class="nosotras">
+
             <h2>Nosotras</h2>
-            <p>Acá va una breve descripción.</p>
+            <div class="divider"></div>
+
+            <div class="nosotras-grid">
+
+                <article class="nosotras-item">
+                    <img src="assets/img/draGamez.jpg" alt="Dra. Lucila Gamez">
+                    <p>
+                        <strong>Dra. Lucila Gamez:</strong><br>
+                        Texto descriptivo de la abogada 1. Rol, enfoque, breve bio.
+                    </p>
+                </article>
+
+                <article class="nosotras-item">
+                    <img src="assets/img/draFranco.jpg" alt="Dra. Karen Franco">
+                    <p>
+                        <strong>Dra. Karen Franco:</strong><br>
+                        Texto descriptivo de la abogada 2. Rol, enfoque, breve bio.
+                    </p>
+                </article>
+
+            </div>
+
         </section>
 
-        <section id="servicios">
+        <section id="servicios" class="servicios">
+
             <h2>Servicios</h2>
-            <p>Listado o descripción de servicios.</p>
+
+            <div class="servicios-lista">
+
+                <article class="servicio-item">
+                    <h3>Derecho de Familia</h3>
+                    <p>
+                        Asesoramiento integral en divorcios, alimentos, régimen de comunicación
+                        y cuidado personal de hijos.
+                    </p>
+                    <div class="servicio-divider"></div>
+                </article>
+
+                <article class="servicio-item">
+                    <h3>Derecho Laboral</h3>
+                    <p>
+                        Defensa del trabajador y del empleador en conflictos laborales,
+                        despidos, indemnizaciones y conciliaciones.
+                    </p>
+                    <div class="servicio-divider"></div>
+                </article>
+
+                <article class="servicio-item">
+                    <h3>Derecho Civil</h3>
+                    <p>
+                        Contratos, daños y perjuicios, sucesiones y asesoramiento jurídico
+                        general.
+                    </p>
+                    <div class="servicio-divider"></div>
+                </article>
+
+            </div>
         </section>
+
 
         <section id="contacto">
             <h2>Contacto</h2>
@@ -90,6 +166,12 @@
                     <span>Estudio FG</span>
                 </a>
 
+                <a href="https://www.facebook.com/estudiodeabogadas.fg" class="contact-item" target="_blank"
+                    rel="noopener">
+                    <i class="fab fa-facebook"></i>
+                    <span>Estudio de Abogadas FG</span>
+                </a>
+
             </div>
 
             <div class="contact-form-intro">
@@ -99,11 +181,7 @@
                 </p>
             </div>
 
-            <form 
-            class="contact-form" 
-            action="https://formspree.io/f/meekrvja" 
-            method="POST" 
-            novalidate>
+            <form class="contact-form" action="https://formspree.io/f/meekrvja" method="POST" novalidate>
 
                 <div class="form-field">
                     <label for="nombre">Nombre</label>
