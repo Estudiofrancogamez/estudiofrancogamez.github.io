@@ -13,7 +13,7 @@
   --color-principal: #1f2933;
   --color-acento: #2563eb;
   --color-texto: #333;
-  --altura-navbar: 64px;
+  --altura-navbar: 80px;
 }
 
 /* =====================
@@ -72,6 +72,11 @@ section:nth-child(odd) {
   background-color: var(--color-acento);
   margin: 2rem auto;
 }
+section > p {
+  margin: 1rem auto;
+  text-align: center;
+}
+
 
 /* =====================
    NAVBAR
@@ -98,7 +103,7 @@ header {
 }
 
 .logo {
-  height: 40px;
+  height: var(--altura-navbar);
   width: auto;
 }
 
@@ -164,6 +169,24 @@ header {
   margin: 3rem auto;
   padding: 0 2rem;
   text-align: center;
+}
+.intro-text p {
+  margin-bottom: 1.25rem;
+}
+
+.intro-lead {
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+
+.intro-meta {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* Desktop */
+.line-break {
+  display: inline;
 }
 
 /* =====================
@@ -350,14 +373,19 @@ footer {
    RESPONSIVE
 ===================== */
 
-@media (max-width: 720px) {
+@media (max-width: 760px) {
+  
+  .line-break {
+    display: block;
+  }
+
   .intro-bg {
     background-position: 75% center;
     opacity: 0.4;
   }
 }
 
-@media (max-width: 420px) {
+@media (max-width: 450px) {
   section {
     padding: 3rem 1.5rem;
   }
@@ -367,7 +395,7 @@ footer {
   }
 
   .logo {
-    height: 32px;
+    height: var(--altura-navbar);
   }
 
   .menu-toggle {
