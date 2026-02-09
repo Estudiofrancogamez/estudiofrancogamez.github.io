@@ -6,7 +6,8 @@ const navLinks = document.querySelectorAll(".nav-link");
 
 const observerOptions = {
   root: null,
-  threshold: 0.4
+  threshold: 0,
+  rootMargin: "-64px 0px -80px 0px"
 };
 
 const observer = new IntersectionObserver((entries) => {

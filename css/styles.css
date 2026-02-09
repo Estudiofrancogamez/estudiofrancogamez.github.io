@@ -214,8 +214,18 @@ header {
   margin-bottom: 1rem;
 }
 
+
 .nosotras-item p {
-  margin: 0 auto;
+  max-width: 38ch;          
+  margin: 0.5rem auto 1rem;
+  font-size: 0.9rem;        
+  line-height: 1.6;         
+  text-align: justify;      
+}
+
+.nosotras-item p strong {
+  display: block;
+  margin-bottom: 0.5rem;
   font-size: 0.95rem;
 }
 
