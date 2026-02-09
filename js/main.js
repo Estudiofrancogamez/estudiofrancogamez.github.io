@@ -177,5 +177,14 @@ function showErrors(form, errors) {
     }
   });
 }
+// nosotras, CV expandible
+document.querySelectorAll(".nosotras-toggle").forEach(button => {
+  button.addEventListener("click", () => {
+    const article = button.closest(".nosotras-item");
+    const isOpen = article.classList.toggle("is-open");
 
+    button.textContent = isOpen ? "Leer menos" : "Leer más";
+    button.setAttribute("aria-expanded", isOpen);
+  });
+});
 

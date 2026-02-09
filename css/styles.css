@@ -228,7 +228,28 @@ header {
   margin-bottom: 0.5rem;
   font-size: 0.95rem;
 }
+.nosotras-extra {
+  display: none;
+  margin-top: 0.5rem;
+}
 
+.nosotras-item.is-open .nosotras-extra {
+  display: block;
+}
+
+.nosotras-toggle {
+  background: none;
+  border: none;
+  color: #444;
+  font-size: 0.85rem;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  text-decoration: underline;
+}
+
+.nosotras-toggle:hover {
+  color: #000;
+}
 /* =====================
    SERVICIOS
 ===================== */
