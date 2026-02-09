@@ -181,10 +181,21 @@ function showErrors(form, errors) {
 document.querySelectorAll(".nosotras-toggle").forEach(button => {
   button.addEventListener("click", () => {
     const article = button.closest(".nosotras-item");
+    const section = document.querySelector("#nosotras");
+
     const isOpen = article.classList.toggle("is-open");
 
     button.textContent = isOpen ? "Leer menos" : "Leer más";
     button.setAttribute("aria-expanded", isOpen);
+
+    // 👉 si se cerró, recentramos la sección
+    if (!isOpen) {
+      section.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+    }
   });
 });
+
 
